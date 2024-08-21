@@ -1,9 +1,11 @@
 import telebot
 from pytubefix import YouTube
 import os
+from keep_alive import keep_alive
+keep_alive()
 
 # Masukkan TOKEN Telegram disini
-API_TOKEN = "7251759171:AAEnWyJ7HKXF51gJ8DwWRPKEYwrvhyk1gOs"
+API_TOKEN = os.environ.get('token')
 
 bot = telebot.TeleBot(API_TOKEN)
 
